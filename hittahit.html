@@ -24,28 +24,21 @@
             </iframe>
 
             <h3>Vad är det för temperatur i Kallax? </h3>
-<!-- Här ska temperaturen visas -->
 <div id="weather">Laddar väderdata...</div>
 
 <script>
-  // 1. SMHI API URL för Kallax (latitude 65.584, longitude 22.133)
   const apiUrl = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/22.133/lat/65.584/data.json";
 
-  // 2. Hämta data från API:et
-  fetch(apiUrl)  // fetch() gör en "förfrågan" till API:et
+  fetch(apiUrl) 
     .then(function(response) {
-      // 3. Konvertera svaret till JSON
       return response.json();
     })
     .then(function(data) {
-      // 4. Hitta temperaturvärdet i datan
-      // data.timeSeries är en lista med väderpunkter för olika tider
-      // parameters innehåller olika värden som temperatur ("t"), vind m.m.
-      const firstTimePoint = data.timeSeries[0];  // första tidsperioden
+      const firstTimePoint = data.timeSeries[0]; 
       const tempParameter = firstTimePoint.parameters.find(function(p) {
-        return p.name === "t";  // "t" = temperatur
+        return p.name === "t";  
       });
-      const temperature = tempParameter.values[0];  // själva temperaturvärdet
+      const temperature = tempParameter.values[0]; 
 
       // 5. Visa temperaturen på sidan
       const weatherDiv = document.getElementById("weather");

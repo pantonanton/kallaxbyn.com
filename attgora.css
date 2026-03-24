@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #b49371;
+    font-family: serif, sans-serif; 
+    font-size: 16px;
+    line-height: 1.6; 
+    color: black;
+}
+header{
+    background-image: url("bilder/kor240820.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 450px;
+    max-width: 100%;
+}
+
+#center{
+    width: 65%;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    font-weight: bold; 
+    text-decoration: underline; 
+    flex-wrap: wrap;
+}
+
+h2{
+    text-decoration: none;
+    color: green;
+    -webkit-text-stroke: 0.5px black;
+    padding: 6px;
+    font-family: Georgia, serif; 
+    text-align: center;
+}
+main{
+    background-color: lightgrey;   
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    padding: 30px;
+}
+
+d{
+    text-decoration: none;
+    color: black;
+    padding: 6px;
+    text-align: center;
+}
+
+img{
+    width: 90%;
+    height: auto;
+}
